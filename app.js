@@ -48,3 +48,27 @@ const user = {
 
   // Zadanie 4
   console.log(_.find(user.allGrades, { weight: 1 }));
+
+  // Zadanie 5
+  const collections = [
+    {},
+    15,
+    "hello@test.pl",
+    null,
+    ["aaa", "bbb", 5],
+    "admin@gmail.com",
+    undefined,
+    "a34@yahoo.com",
+    "321@a",
+    "321.pl",
+  ];
+  
+  function getMails(collection) {
+    const regex = /.+@.+\..+/;
+    return _.filter(
+      collection,
+      (email) => typeof email === "string" && regex.test(email)
+    );
+  }
+  
+  console.log(getMails(collections).sort());
