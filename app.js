@@ -45,3 +45,6 @@ const user = {
   }
 
   console.log(showUser(user));
+
+  // Zadanie 4
+  console.log(_.find(user.allGrades, { weight: 1 }));
